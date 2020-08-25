@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f0ae0a;
+  background-color:black;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 17px;
+  float:right;
+}
+
+.topnav a:hover {
+  background-color: #f0ae0a;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #f0ae0a;
+  color: black;
+}
+
+.topnav .icon {
+  display: none; 
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  
+  
+  height: 500px; 
+}
+
+.row:after{
+
+content="";
+display:table;
+clear:both;
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.slideshow-container{
+	max-width:1000px;
+	position:relative;	
+	margin:auto;
+	border left:0;
+	
+	
+}
+.mySlides{
+display:none;
+}
+.next.prev{
+cursor:pointer;
+position:absolute;
+top:50%;
+width:auto;
+margin-top: -22px;
+padding:16px;
+color:white;
+font-weight:bold;
+font-size:18px;
+transition:0.6s ease;
+border-radius:0 3px 3px 0;
+user-select: none;
+}
+.next{
+right:0;
+border-radius:3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.slide {
+  -webkit-animation:slideIn 1s ease-in 2s 6 alternate; /* Safari & Chrome */
+-moz-animation:SlideIn 1s ease-in 2s 6 alternate; /* Firefox */
+-ms-animation:bounce 1s ease-in 2s 6 alternate; /* Internet Explorer */
+-o-animation:bounce 1s ease-in 2s 6 alternate; /* Opera */
+animation:jackInTheBox 2s ease-in 2s 6 alternate; /* W3C */
+
+}
+@-webkit-keyframes sslideIn{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes sslideIn {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+#name{
+	font-family: great vibes;
+	animation:bounce 2s;
+	
+}
+#indoor:hover{
+	
+	font-family: times new roman;
+	animation:bounce 2s;
+}
+#couples:hover{
+	
+	font-family: times new roman;
+	animation:bounce 2s;
+}
+#modelling:hover{
+	
+	font-family: times new roman;
+	animation:bounce 2s;
+}
+#model_img:hover{
+	animation: jello 2s;
+}
+#couple_img:hover{
+	animation: jello 2s;
+}
+#indoor_img:hover{
+	animation: jello 2s;
+}
+
+
+.column2 {
+  float: left;
+  width: 50%;
+  
+  
+  height: 800px; 
+}
+.row2:after{
+content="";
+display:table;
+clear:both;
+}
+.row3:after{
+content="";
+display:table;
+clear:both;
+}
+
+.column_a{
+  float: down;
+  height:50%;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+  
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title1{
+  color: grey;
+}
+
+.button1{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button1:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column_a{
+    width: 100%;
+    display: block;
+  }
+  
+
+  
+  
+  
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+ 
+    
+                <h1 style="float:left;">
+                    <a1 class="c-navigation__logo">
+                        <img   alt="Prixie Photography " data-src="logo.jpg" class="c-navigation__logo-img lazyload" src="logo.png"style= "height:69 px;width:209 px;"><noscript><img class="c-navigation__logo-img" src="logo.jpg" alt="Prixie Photography"></noscript>
+                    </a1>
+                </h1>
+                
+        
+                
+  <a href="#home" class="active">HOME</a>
+  <a href="#about us">ABOUT US</a>
+  <a href="#events">EVENTS</a>
+  <a href="#outdoor">OUTDOOR</a>
+  <a href="#indoor">INDOOR</a>
+  <a href="#couples">COUPLES</a>
+  <a href="#modelling">MODELLING</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<div class="row">
+	<div class="column"style="background-color:white;">
+			<div class="slideshow-container">
+				<div class="slide first">
+				<div class="numbertext">1/3</div>
+				<img src="img1.jpg" style="width:100%">
+				</div>
+				
+				<div class=" slide">
+				<div class="numbertext">2/3</div>
+				<img src="img2.jpg" style="width:100%">
+				</div>
+				
+				<div class="slide">
+				<div class="numbertext">3/3</div>
+				<img src="img3.jpg" style="width:100%">
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			
+			<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<script>
+						var slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+			  var i;
+			  var slides = document.getElementsByClassName("slide");
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  slideIndex++;
+			  if (slideIndex > slides.length) {slideIndex = 1}
+			  slides[slideIndex-1].style.display = "block";
+			  setTimeout(showSlides, 5000); 
+			}
+	</script>		
+		</div>
+	<div class="column"style="background-color:black;color:#f0ae0a;padding-left:25px;">
+		
+		<p><h1 id="name" class = "animate__animated animate__slideIn">Prixie Photography</h1>
+			<p style="animation:slideInRight 3s;">	Our passion towards the photography<br> made us to take this as our Profession.<br>As of
+			now we are providing Indoor,<br>Outdoor,Modelling,Couple shoots with a Professionalism.</p>
+			
+		</p>
+		
+	</div>
+</div>
+<div class="row2">
+	<div class="column"style="background-color:white;">
+			<div style="padding-left:100px;padding-top:100px;">
+				<img id="indoor_img" src="indoor.jpg" style ="width:453px;height:391px;">
+			</div>
+		</div>
+	<div class="column"style="background-color:White;color:#f0ae0a;">
+		
+		<p style ="padding-top:50px;"><h1 id="indoor" style="padding-left:25px;">Indoor Photography</h1>
+			<p style="padding-left:25px;font-family:times new roman;color:black;font-size:18px;">
+			&nbsp &nbsp &nbsp &nbsp &nbsp Indoor photography refers to photos taken indoors: be it portrait photography, real estate photography, or product photography.
+			It can also include artistic projects, such as still life photography or photojournalistic images.
+			Each interior space will be unique and offer different possibilities, 
+			but there are some basic rules to bear in mind that will make the process smoother.</p>
+			
+		</p>
+		
+	</div>
+</div>
+<div class="row3">
+	<div class="column2"style="background-color:white;">
+			<div  style="padding-left:100px;padding-top:200px;">
+				<img id="couple_img" src="couple.jpg" style ="width:500px;height:500px;">
+			</div>
+		</div>
+	<div class="column2"style="background-color:white;color:#f0ae0a;">
+		
+		<p style="padding-top:140px;"><h1 id="couples"style="padding-left:25px;">Couple Photography</h1>
+			<p style="padding-left:25px;font-family:times new roman;color:black;font-size:18px;">
+			Capturing the unwavering bond between couples is, without a doubt, incredibly captivating. 
+			Not only does it make a lure for couples who are truly in love with each other, but also for professionals who are fond of couple photography. 
+			When your connection with your forever love is true, you do not need a stage. Your love automatically reflects in every action you do. 
+			And only couple photography can depict the feelings you hold for your partner.
+			</p>	
+			
+		</p>
+		
+	</div>
+</div>
+<div class="row4">
+	<div class="column2"style="background-color:white;">
+			<div class="container" style="padding-left:100px;padding-top:100px;">
+				<img id ="model_img" src="model.jpg" style ="width:400px;height:600px;">
+			</div>
+		</div>
+	<div class="column2"style="background-color:white;color:#f0ae0a;">
+		
+		<p style ="padding-top:50px;"><h1 id="modelling"Style ="padding-left:25px;">Modelling</h1>
+				<p style="padding-left:25px;font-family:times new roman;color:black;font-size:18px;">
+			Model photography shoots are generally used in the fashion industry, whereby a model poses for a photographer either at a studio or in a specific 
+			shoot location. Although model photography shoots tend to refer to an actual model posing for the camera, it can also signify a photographer taking 
+			photographs of advertised goods for a magazine. Model photography shoots always require a photographer and a shoot location. 
+			Models pose for the camera as instructed by the photographer or the photo shoot coordinator.
+		</p>
+		
+	</div>
+</div>
+<div class="about-section"style="padding: 50px;background-color: #0c0c0c;color: white;">
+	<h1 style="padding-top:700 px;text-align:center;">About Us </h1>
+<div class="row5" style = "height:200px;font-family:Times new roman;">
+	
+<div class="column" style="height:100%;width:33%;float:left">
+	<h1 style="align:center;">Contact Details</h1>
+		  <p>Email:prixie_studio@gmail.com</p>
+		  <p>Contact Number:9********0</p>
+		  <p>Instagram:Prixie_studio_</p>
+  </div>
+  <div class="column" style="height:100%;width:33%;float:center;">
+	<h1 style="align:center;">Locations</h1>
+		  <p>Chennai</p>
+		  <p>Pondicherry</p>
+		  <p>Kerala</p>
+  </div>
+  <div class="column" style="height:100%;width:33%;float:right;">
+	  <h1 style="align:center;">Our Team</h1>
+		  <p>Photographer: PRAMOTH DANIEL I</p>
+		  <p>Editor: DANIEL C</p>
+		  <p>PhotoJournalist:SATHISH R</p>
+  </div>
+</div>
+</div>
+</body>
+</html>
